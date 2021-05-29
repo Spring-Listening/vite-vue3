@@ -4,15 +4,15 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-05-28 15:02:11
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-05-29 10:53:38
+ * @LastEditTime: 2021-05-29 13:42:05
 -->
 <template>
   <div class="home-container">
     home 组件
     <div>
-      {{ $store.state.count }}
+      {{ store.state.count }}
     </div>
-    <div>getter {{ $store.getters.double }}</div>
+    <div>getter {{ store.getters.double }}</div>
     <div @click="handleClick">commit</div>
     <div @click="handleAction">action</div>
   </div>
@@ -31,6 +31,7 @@ export default defineComponent({
       store.dispatch('increment')
     }
     return {
+      store,
       handleClick,
       handleAction
     }
