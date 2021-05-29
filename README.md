@@ -4,7 +4,7 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-05-28 14:44:04
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-05-28 17:28:20
+ * @LastEditTime: 2021-05-29 12:05:27
 -->
 
 # Vue 3 + Typescript + Vite
@@ -40,4 +40,8 @@ Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
 ```js
 格式化所有文件（. 表示所有文件）
 npx prettier --write .
+```
+## 对应GitHub仓库token
+```
+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
 ```
