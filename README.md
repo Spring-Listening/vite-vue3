@@ -4,7 +4,7 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-05-28 14:44:04
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-05-29 13:56:09
+ * @LastEditTime: 2021-05-29 15:49:22
 -->
 
 # Vue 3 + Typescript + Vite
@@ -43,5 +43,5 @@ npx prettier --write .
 ```
 ## 对应GitHub仓库token
 ```
-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
+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
 ```
