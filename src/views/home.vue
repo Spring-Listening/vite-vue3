@@ -4,7 +4,7 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-05-28 15:02:11
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-05-29 13:42:05
+ * @LastEditTime: 2021-06-12 14:43:58
 -->
 <template>
   <div class="home-container">
@@ -20,6 +20,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useStore } from 'vuex'
+import Http from '@/utils/http'
 
 export default defineComponent({
   setup() {
@@ -30,10 +31,16 @@ export default defineComponent({
     const handleAction = () => {
       store.dispatch('increment')
     }
+    const getData = () => {
+      Http.get('url').then((res: Object) => {
+        console.log(res)
+      })
+    }
     return {
       store,
       handleClick,
-      handleAction
+      handleAction,
+      getData
     }
   }
 })
