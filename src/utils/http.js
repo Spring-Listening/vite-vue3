@@ -4,10 +4,10 @@
  * @Author: zoucw (326359613@qq.com)
  * @Date: 2021-03-29 16:59:24
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-05-28 17:56:07
+ * @LastEditTime: 2022-01-04 10:53:22
  */
 import axios from 'axios'
-import { Message } from 'element-plus'
+import { ElMessage } from 'element-plus'
 // 创建axios实例
 // 创建请求时可以用的配置选项
 
@@ -39,19 +39,19 @@ instance.interceptors.request.use(
 const errorHandle = (status, other) => {
   switch (status) {
     case 400:
-      Message.error('信息校验失败')
+      ElMessage.error('信息校验失败')
       break
     case 401:
-      Message.error('认证失败')
+      ElMessage.error('认证失败')
       break
     case 403:
-      Message.error('token校验失败')
+      ElMessage.error('token校验失败')
       break
     case 404:
-      Message.error('请求的资源不存在')
+      ElMessage.error('请求的资源不存在')
       break
     default:
-      Message.error(other)
+      ElMessage.error(other)
       break
   }
 }
@@ -61,13 +61,13 @@ instance.interceptors.response.use(
   // 响应包含以下信息data,status,statusText,headers,config
   (res) => (res.status === 200 ? Promise.resolve(res) : Promise.reject(res)),
   (err) => {
-    Message.error(err)
+    ElMessage.error(err)
     const { response } = err
     if (response) {
       errorHandle(response.status, response.data)
       return Promise.reject(response)
     }
-    Message.error('请求失败')
+    ElMessage.error('请求失败')
     return true
   }
 )
