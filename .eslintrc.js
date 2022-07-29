@@ -4,7 +4,7 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-05-28 17:35:11
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-06-12 14:46:21
+ * @LastEditTime: 2022-01-04 14:25:06
  */
 module.exports = {
   env: {
@@ -26,6 +26,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'vue/no-multiple-template-root': 'off',
     'no-console': 'off',
+    'vue/script-setup-uses-vars': 'off',
     'no-param-reassign': [
       'error',
       {

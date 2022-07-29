@@ -4,9 +4,9 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-05-28 15:00:58
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-05-28 18:06:47
+ * @LastEditTime: 2022-07-29 17:47:54
  */
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -18,7 +18,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory('/micro-test'),
   routes
 })
 
